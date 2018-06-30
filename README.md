@@ -2,6 +2,7 @@
 
 ## Description
 Below table contains a simple menu of a coffee shop.  
+
 | Type/Size    | Tall   | Grande|Venti  |
 | :-----------:|:------:|:-----:|:-----:|
 | Espresso     | $1.95  | $2.05 | $2.35 |
