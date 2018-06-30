@@ -1,0 +1,31 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'coffeeshop/style.css' %}" />
+
+{% block content %}
+{% endblock %}
+<table border="1">
+  <thead>
+    <tr>
+      <th>Index</th>
+      <th>Drink Category</th>
+      <th>Drink Name</th>
+      <th>Size</th>
+      <th>Quantity</th>
+      <th>Unit Price($)</th>
+      <th>Ordered At</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for order in order_list %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ order.drink.drink_type.category.name }}</td>
+        <td>{{ order.drink.drink_type.name }}</td>
+        <td>{{ order.drink.size.name }}</td>
+        <td>{{ order.quantity }}</td>
+        <td>{{ order.drink.price }}</td>
+        <td>{{ order.ordered_at }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

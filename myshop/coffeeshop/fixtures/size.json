@@ -1,0 +1,23 @@
+[
+  {
+    "model": "coffeeshop.size",
+    "pk": 1,
+    "fields": {
+      "name": "Tall"
+    }
+  },
+  {
+    "model": "coffeeshop.size",
+    "pk": 2,
+    "fields": {
+      "name": "Grande"
+    }
+  },
+  {
+    "model": "coffeeshop.size",
+    "pk": 3,
+    "fields": {
+      "name": "Venti"
+    }
+  }
+]

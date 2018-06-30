@@ -1,0 +1,16 @@
+[
+  {
+    "model": "coffeeshop.category",
+    "pk": 1,
+    "fields": {
+      "name": "Coffee"
+    }
+  },
+  {
+    "model": "coffeeshop.category",
+    "pk": 2,
+    "fields": {
+      "name": "Tea"
+    }
+  }
+]

@@ -1,0 +1,119 @@
+[
+  {
+    "model": "coffeeshop.drink",
+    "pk": 1,
+    "fields": {
+      "price": "1.95",
+      "drink_type": 1,
+      "size": 1
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 2,
+    "fields": {
+      "price": "3.40",
+      "drink_type": 2,
+      "size": 1
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 3,
+    "fields": {
+      "price": "3.15",
+      "drink_type": 3,
+      "size": 1
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 4,
+    "fields": {
+      "price": "3.45",
+      "drink_type": 4,
+      "size": 1
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 5,
+    "fields": {
+      "price": "2.05",
+      "drink_type": 1,
+      "size": 2
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 6,
+    "fields": {
+      "price": "4.45",
+      "drink_type": 2,
+      "size": 2
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 7,
+    "fields": {
+      "price": "3.75",
+      "drink_type": 3,
+      "size": 2
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 8,
+    "fields": {
+      "price": "4.25",
+      "drink_type": 4,
+      "size": 2
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 9,
+    "fields": {
+      "price": "1.95",
+      "drink_type": 5,
+      "size": 2
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 10,
+    "fields": {
+      "price": "2.35",
+      "drink_type": 1,
+      "size": 3
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 11,
+    "fields": {
+      "price": "4.65",
+      "drink_type": 2,
+      "size": 3
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 12,
+    "fields": {
+      "price": "4.15",
+      "drink_type": 3,
+      "size": 3
+    }
+  },
+  {
+    "model": "coffeeshop.drink",
+    "pk": 13,
+    "fields": {
+      "price": "4.45",
+      "drink_type": 4,
+      "size": 3
+    }
+  }
+]

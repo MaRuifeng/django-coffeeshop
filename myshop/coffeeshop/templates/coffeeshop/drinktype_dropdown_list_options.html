@@ -1,0 +1,4 @@
+<option value="">Select</option>
+{% for type in drinktypes %}
+<option value="{{ type.pk }}">{{ type.name }}</option>
+{% endfor %}

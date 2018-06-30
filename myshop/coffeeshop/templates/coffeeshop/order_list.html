@@ -1,0 +1,19 @@
+{% extends "coffeeshop/order_table.html" %}
+
+{% block content %}
+<title>Shop Orders</title>
+<h1>List of Orders</h1>
+<p>
+  <a href="{% url 'coffeeshop:index' %}">Add New</a>
+</p>
+
+<p>Total Sales: {{ total_sales }}</p>
+
+<form action="{% url 'coffeeshop:filtered_order_list' %}" method="get" id="filter_form">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="Filter" />
+</form>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'coffeeshop/style.css' %}" />
+<title>Coffee Shop</title>
+<body onload="document.getElementById('order_form').reset();">
+<h1>Welcome!</h1>
+<p>Please place an order.</p>
+
+{% if error_message %}<p style="color:red;"><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'coffeeshop:place_order' %}" method="post" id="order_form"
+        data-drinktypes-url="{% url 'coffeeshop:ajax_load_drinktypes' %}"
+        data-sizes-url="{% url 'coffeeshop:ajax_load_sizes' %}">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit" />
+</form>
+
+<p><a href="{% url 'coffeeshop:order_list' %}">View All Orders</a></p>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$("#id_category").change(function () {
+  var url = $("#order_form").attr("data-drinktypes-url");
+  var catId = $(this).val();
+  if (catId) {
+    $.ajax({
+      url: url,
+      data: {
+        'category_id': catId
+      },
+      success: function (data) {
+        //console.log(data)
+        $("#id_drink_type").html(data);
+      }
+    });
+  } else $("#id_drink_type option:gt(0)").remove().end()
+});
+
+$("#id_drink_type").change(function () {
+  var url = $("#order_form").attr("data-sizes-url");
+  var typeId = $(this).val();
+  if (typeId) {
+    $.ajax({
+      url: url,
+      data: {
+        'drink_type_id': typeId
+      },
+      success: function (data) {
+        $("#id_size").html(data);
+      }
+    });
+  } else $("#id_size option:gt(0)").remove().end()
+});
+</script>

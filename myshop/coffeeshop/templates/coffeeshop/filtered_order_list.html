@@ -1,0 +1,9 @@
+{% extends "coffeeshop/order_table.html" %}
+
+{% block content %}
+<title>Shop Orders</title>
+<h1>List of Filtered Orders</h1>
+<p>
+  <a href="{% url 'coffeeshop:order_list' %}">Back</a>
+</p>
+{% endblock %}

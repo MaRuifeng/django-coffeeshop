@@ -1,0 +1,42 @@
+[
+  {
+    "model": "coffeeshop.drinktype",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Espresso"
+    }
+  },
+  {
+    "model": "coffeeshop.drinktype",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Latte"
+    }
+  },
+  {
+    "model": "coffeeshop.drinktype",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "name": "Cappuccino"
+    }
+  },
+  {
+    "model": "coffeeshop.drinktype",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "name": "GreenTea"
+    }
+  },
+  {
+    "model": "coffeeshop.drinktype",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "name": "HotTea"
+    }
+  }
+]
