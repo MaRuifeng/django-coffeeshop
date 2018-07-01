@@ -17,14 +17,27 @@ Code a simple Django web app that supports
 * Group orders by beverage category (coffee or tea) and/or size
 
 ## Design
-The app is designed via below simple database schema with general OOP principles adhered to. Coding is completed by following the well written [Django Documentation](https://docs.djangoproject.com/en/2.0/).
+The app is designed via below simple database schema with general OOP principles adhered to. Coding is completed by following the well written [Django Documentation](https://docs.djangoproject.com/en/2.0/) with the MVC design pattern.
 * `Category` - data model hosting beverage categories (coffe, tea etc.).
 * `DrinkType` - data model hosting beverage type (Espresso, Green Tea etc.), `many-to-one` mapped to the `Category` model.
 * `Size` - data model hosting available beverage sizes offered by the shop.
 * `Drink` - data model hosting beverage prices based on type and size, `many-to-many` mapped to the `DrinkType` and `Size` model, yet combination of the both yields a unique constraint.
 * `Order` - data model hosting beverage orders, `many-to-one` mapped to the `Drink` model, containing a quantity field indicating number of beverages in an order.
 
+## Requirements
+* Django ~> 2.0.6
+* python ~> 3.4.3
+
 ## Build & Deployment
+### Local envrionment
+* Load the source code from the `development` branch.
+* Fixtures are available to load initial DB data.
+* Install the required the python packages and start server with command `python3 manage.py runserver`. The application is available at http://127.0.0.1:8000/coffeeshop/ and the Django admin at http://127.0.0.1:8000/admin. Some other useful commands are listed below.
+  *  `python3 manage.py shell` - start the interactive python CLI shell
+  *  `sqlite3 db.sqlite3` - start the SQLite CLI shell
+  *  `python3 manage.py test coffeeshop` - run tests
+### Heroku
+The app is also deployed on Heroku accessible via https://flyer-shop.herokuapp.com/coffeeshop/.
 
 ## App Workflow
 A admin person (powered by Django Admin) can open up the admin page to add new beverage categories, types and prices.
@@ -41,6 +54,11 @@ This is a beginner project in Django for practice purpose. Below constraints are
 * Filtering on order list can be better implemented with built-in Django tables and filters, in an Ajax manner instead of page redirecting
 * Unit test coverage needs to be greatly expanded
 * Other unspotted silly code snippets that do not fully utilize the power of the Django
+
+## Extension Requirements
+* Adding new beverage types or sizes: available via the Django admin console
+* Support of adding condiments (grass jelly etc.): if the condiments have fixed price increments, a new model representing them can be added with a reference added to the `Order` model. Codeondiments are taken as parallel products offered by the shop just like beverages. 
+
 
 ## Author
 Ruifeng Ma (mrfflyer@gmail.com)
