@@ -37,10 +37,10 @@ The app is designed via below simple database schema with general OOP principles
   *  `sqlite3 db.sqlite3` - start the SQLite CLI shell
   *  `python3 manage.py test coffeeshop` - run tests
 ### Heroku
-The app is also deployed on Heroku accessible via https://flyer-shop.herokuapp.com/coffeeshop/.
+The app is deployed from the `master` branch on Heroku accessible via https://flyer-shop.herokuapp.com/coffeeshop/.
 
 ## App Workflow
-A admin person (powered by Django Admin) can open up the admin page to add new beverage categories, types and prices.
+An admin person (powered by Django Admin) can open up the admin page  https://flyer-shop.herokuapp.com/admin to add new beverage categories, types and prices.
 
 Once launched, a webpage will be directly presented to a shop cashier to place orders. Beverage types and sizes are loaded via chained Ajax calls for selection, depending on their availability in the database. Quantity can also be set or selected. Once selections are done and the submit button is clicked, an order will be placed via HTML form submission and the user will be directed to a page listing all orders and total sales amount. Filters are provided on the same page to view orders by category and/or size.
 
@@ -48,7 +48,7 @@ Once launched, a webpage will be directly presented to a shop cashier to place o
 This is a beginner project in Django for practice purpose. Below constraints are documented for further possible improvements.
 * CSS styling is missing
 * Currently plain Django form is used for order placement (a classed based `ModelForm` can be explored for cleaner implementation)
-* Coverage by generic class based views (`CreateView`, `ListView` etc.) can be expanded
+* Usage by generic class based views (`CreateView`, `ListView` etc.) can be expanded
 * `Order` update/delete is not supported
 * Ideally an `OrderDetail` model should be separated from the `Order` model such that different beverages can be placed in a single order, which is a very practical use case
 * Filtering on order list can be better implemented with built-in Django tables and filters, in an Ajax manner instead of page redirecting
@@ -57,7 +57,7 @@ This is a beginner project in Django for practice purpose. Below constraints are
 
 ## Extension Requirements
 * Adding new beverage types or sizes: available via the Django admin console
-* Support of adding condiments (grass jelly etc.): if the condiments have fixed price increments, a new model representing them can be added with a reference added to the `Order` model. Codeondiments are taken as parallel products offered by the shop just like beverages. 
+* Support of adding condiments (grass jelly etc.): if the condiments have fixed price increments, a new model representing them can be added with a reference added to the `Order` model. Codeondiments are taken as parallel products offered by the shop just like beverages.
 
 
 ## Author
