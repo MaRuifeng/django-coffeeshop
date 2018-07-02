@@ -57,7 +57,7 @@ This is a beginner project in Django for practice purpose. Below constraints are
 
 ## Extension Requirements
 * Adding new beverage types or sizes: available via the Django admin console
-* Support of adding condiments (grass jelly etc.): if the condiments have fixed price increments, a new model representing them can be added with a reference added to the `Order` model. Codeondiments are taken as parallel products offered by the shop just like beverages.
+* Support of adding condiments (grass jelly etc.): if the condiments have fixed price increments, a new model representing them can be added with a reference added to the `Order` model. Condiments are taken as parallel products offered by the shop just like beverages.
 
 
 ## Author
